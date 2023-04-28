@@ -106,4 +106,3 @@ filtersElm.addEventListener('submit', zobraz);
 // })
 
 // const selectGenreElm = document.querySelector('#select-genre');
-

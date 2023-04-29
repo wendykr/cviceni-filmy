@@ -1,4 +1,4 @@
-console.log('funguju!');
+// console.log('funguju!');
 
 // 1. FILMY
 const renderFilms = (items) => {
@@ -35,12 +35,16 @@ fetch('https://apps.kodim.cz/daweb/trening-api/apis/movie-api/movies')
 
 // 2. FILMY PODLE ŽÁNRŮ
 
+const capitalize = (text) => {
+  return text[0].toUpperCase() + text.slice(1);
+}
+
 const renderOptions = (items) => {
   const selectGenreElm = document.querySelector('#select-genre');
 
   selectGenreElm.innerHTML = items
   .map(oneOption =>
-    `<option value="${oneOption}">${oneOption}</option>`
+    `<option value="${oneOption}">${capitalize(oneOption)}</option>`
   )
   .join('');
 }
